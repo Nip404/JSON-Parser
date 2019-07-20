@@ -6,7 +6,7 @@ use Data::Dumper;
 
 use feature "say";
 
-my $filename = "jsoneg.json";
+my $filename = "sample.json";
 
 my $parser = new JSONParser();
 my $data = $parser->parse($filename);
