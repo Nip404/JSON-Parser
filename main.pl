@@ -9,8 +9,9 @@ use feature "say";
 my $filename = "sample.json";
 
 my $parser = new JSONParser();
-my $data = $parser->parse($filename);
+my $file = $parser->parse($filename);
 
-my @elements = ("quiz", "maths", "q2", "options");
-my $wanted = $parser->retrieve($data, \@elements);
-say Dumper $wanted;
+my $elements_ref = ["quiz", "maths", "q2", "options"];
+my $data = $parser->retrieve($file, $elements_ref);
+
+say Dumper $data;
